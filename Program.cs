@@ -27,6 +27,7 @@ namespace PC2
             // Aprobado por el presidente
             p = new Compra(2035, 32590.10, "Proyecto X");
             jose.ProcesarSolicitud(p);
+            // Se requiere de una reunión ejecutiva
             p = new Compra(2036, 122100.00, "Proyecto Y");
             jose.ProcesarSolicitud(p);
             // Espera el input del usuario
@@ -91,44 +92,12 @@ namespace PC2
                 else
                 {
                     Console.WriteLine(
-                        "Solicitud # {0} requiere de una reunión ejecutiva!",
+                        "Solicitud # {0} requiere de una reunión ejecutiva.",
                         compra.Numero);
                 }
             }
         }
 
-        public class Compra
-        {
-            int numero;
-            double monto;
-            string razon;
-
-            //get-set de compra
-
-            public Compra(int numero, double monto, string razon)
-            {
-                this.numero = numero;
-                this.monto = monto;
-                this.razon = razon;
-            }
- 
-            public int Numero
-            {
-                get { return numero; }
-                set { numero = value; }
-            }
-
-            public double Monto
-            {
-                get { return monto; }
-                set { monto = value; }
-            }
-            public string Razon
-            {
-                get { return razon; }
-                set { razon = value; }
-            }
-        }
     }
 
 }
